@@ -23,7 +23,6 @@ public class Agenda {
             if(paciente.getCpf().equals(cpf)){
                 System.out.println(paciente.getNome()+" removido com sucesso");
                 pacientes.remove(paciente);
-                pacientes.size();
             }
         }
     }
@@ -61,5 +60,12 @@ public class Agenda {
 
     public void setMedico(Medico medico) {
         this.medico = medico;
+    }
+
+    public void imprimirListaPacientes(){
+        System.out.println("Data do Atendimento: "+data+ ", Médico: "+medico.getNome());
+        for(Paciente paciente : pacientes){
+            System.out.println(paciente.getNome() +" , "+paciente.getTelefone()+" , "+paciente.getIdade()+" , "+paciente.getCpf());
+        }
     }
 }
